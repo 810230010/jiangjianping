@@ -87,15 +87,25 @@
 
 
 
-<meta name="description" content="Whatever is worth doing is worth doing well.----任何值得做的事就值得把它做好！">
-<meta property="og:type" content="website">
-<meta property="og:title" content="阿江的博客">
-<meta property="og:url" content="https://810230010.github.io/jiangjianping/index.html">
+<meta name="description" content="一.ServletConfig讲解1.1. 什么是ServletConfig ServletConfig:代表当前Servlet在web.xml中的配置信息（用的不多）  String getServletName()  – 获取当前Servlet在web.xml中配置的名字 String getInitParameter(String name) – 获取当前Servlet指定名称的初始化参数的">
+<meta name="keywords">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Servlet基础">
+<meta property="og:url" content="https://810230010.github.io/jiangjianping/2017/05/10/servlet基础/index.html">
 <meta property="og:site_name" content="阿江的博客">
-<meta property="og:description" content="Whatever is worth doing is worth doing well.----任何值得做的事就值得把它做好！">
+<meta property="og:description" content="一.ServletConfig讲解1.1. 什么是ServletConfig ServletConfig:代表当前Servlet在web.xml中的配置信息（用的不多）  String getServletName()  – 获取当前Servlet在web.xml中配置的名字 String getInitParameter(String name) – 获取当前Servlet指定名称的初始化参数的">
+<meta property="og:image" content="https://810230010.github.io/jiangjianping/2017/05/10/servlet基础/images/1.jpg">
+<meta property="og:image" content="https://810230010.github.io/jiangjianping/2017/05/10/servlet基础/images/2.png">
+<meta property="og:image" content="https://810230010.github.io/jiangjianping/2017/05/10/servlet基础/images/3.png">
+<meta property="og:image" content="https://810230010.github.io/jiangjianping/2017/05/10/servlet基础/images/4.png">
+<meta property="og:image" content="https://810230010.github.io/jiangjianping/2017/05/10/servlet基础/images/5.png">
+<meta property="og:image" content="https://810230010.github.io/jiangjianping/2017/05/10/servlet基础/images/6.png">
+<meta property="og:image" content="https://810230010.github.io/jiangjianping/2017/05/10/servlet基础/images/7.png">
+<meta property="og:updated_time" content="2017-05-10T13:59:29.290Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="阿江的博客">
-<meta name="twitter:description" content="Whatever is worth doing is worth doing well.----任何值得做的事就值得把它做好！">
+<meta name="twitter:title" content="Servlet基础">
+<meta name="twitter:description" content="一.ServletConfig讲解1.1. 什么是ServletConfig ServletConfig:代表当前Servlet在web.xml中的配置信息（用的不多）  String getServletName()  – 获取当前Servlet在web.xml中配置的名字 String getInitParameter(String name) – 获取当前Servlet指定名称的初始化参数的">
+<meta name="twitter:image" content="https://810230010.github.io/jiangjianping/2017/05/10/servlet基础/images/1.jpg">
 
 
 
@@ -123,13 +133,13 @@
 
 
 
-  <link rel="canonical" href="https://810230010.github.io/jiangjianping/"/>
+  <link rel="canonical" href="https://810230010.github.io/jiangjianping/2017/05/10/servlet基础/"/>
 
 
 
 
 
-  <title> 阿江的博客 </title>
+  <title> Servlet基础 | 阿江的博客 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -154,9 +164,7 @@
     
   
 
-  <div class="container sidebar-position-left 
-   page-home 
- ">
+  <div class="container sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -259,9 +267,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
 
@@ -291,10 +299,7 @@
             
             
               
-                
-                <a class="post-title-link" href="/jiangjianping/2017/05/10/servlet基础/" itemprop="url">
-                  Servlet基础
-                </a>
+                Servlet基础
               
             
           </h1>
@@ -389,34 +394,72 @@
       
 
       
+        <h2 id="一-ServletConfig讲解"><a href="#一-ServletConfig讲解" class="headerlink" title="一.ServletConfig讲解"></a>一.ServletConfig讲解</h2><p><b>1.1. 什么是ServletConfig</b></p>
+<p>ServletConfig:代表当前Servlet在web.xml中的配置信息（用的不多）</p>
+<ul>
+<li>String getServletName()  – 获取当前Servlet在web.xml中配置的名字</li>
+<li>String getInitParameter(String name) – 获取当前Servlet指定名称的初始化参数的值</li>
+<li>Enumeration getInitParameterNames()  – 获取当前Servlet所有初始化参数的名字组成的枚举</li>
+<li><strong>ServletContext getServletContext()  – 获取代表当前web应用的ServletContext对象</strong></li>
+</ul>
+<p><b>1.2.配置Servlet初始化参数</b><br></p>
+<p>在Servlet的配置文件web.xml中，可以使用一个或多个<init-param>标签为servlet配置一些初始化参数。</init-param></p>
+<p>例如:</p>
+<p><img src="images/1.jpg" alt="Alt text"></p>
+<h2 id="二-ServletContext：代表当前web应用"><a href="#二-ServletContext：代表当前web应用" class="headerlink" title="二.ServletContext：代表当前web应用"></a>二.ServletContext：代表当前web应用</h2><p>WEB容器在启动时，它会为每个WEB应用程序都创建一个对应的ServletContext对象，它代表当前web应用。</p>
+<p>ServletConfig对象中维护了ServletContext对象的引用，开发人员在编写servlet时，可以通过ServletConfig.getServletContext方法获得ServletContext对象或者Servlet直接得到ServletConfig—-&gt;(this.getServletContext())。</p>
+<p><strong>1.做为域对象可以在整个web应用范围内共享数据。</strong></p>
+<p>由于一个WEB应用中的<strong>所有Servlet共享同一个ServletContext对象</strong>，因此Servlet对象之间可以通过ServletContext对象来实现通讯。ServletContext对象通常也被称之为context域对象。可以理解为所有Servlet的容器。<br>恩， 就是这样。</p>
+<p>举个栗子吧,</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div></pre></td><td class="code"><pre><div class="line">1 package com.vae.servlet;</div><div class="line">2</div><div class="line">3 import java.io.IOException;</div><div class="line">4</div><div class="line">5 import javax.servlet.ServletContext;</div><div class="line">6 import javax.servlet.ServletException;</div><div class="line">7 import javax.servlet.http.HttpServlet;</div><div class="line">8 import javax.servlet.http.HttpServletRequest;</div><div class="line">9 import javax.servlet.http.HttpServletResponse;</div><div class="line">10</div><div class="line">11 public class ServletTest01 extends HttpServlet &#123;</div><div class="line">12</div><div class="line">13     public void doGet(HttpServletRequest request, HttpServletResponse response)</div><div class="line">14             throws ServletException, IOException &#123;</div><div class="line">15         ServletContext context = this.getServletContext();</div><div class="line">16         context.setAttribute(&quot;name&quot;, &quot;smyhvae&quot;);</div><div class="line">17     &#125;</div><div class="line">18</div><div class="line">19     public void doPost(HttpServletRequest request, HttpServletResponse response)</div><div class="line">20             throws ServletException, IOException &#123;</div><div class="line">21         doGet(request, response);</div><div class="line">22     &#125;</div><div class="line">23</div><div class="line">24 &#125;</div></pre></td></tr></table></figure>
+<p>接下来所有Servlet都能访问’name’这个属性了。是不是和Session和Request的语法一样? 不过他们的作用范围不一样。ServletContext是全局的(其他用户都可以访问)，而Session是局部的，Request是下个请求能够访问的。</p>
+<p><strong>2.获取WEB应用的初始化参数</strong></p>
+<p>我们在第一段中，通过<init-param>标签为某一个单独的servlet加配置信息，这种配置信息在其他的Servlet中是无法访问到的。可如果我们使用<context-param>标签（与Servlet标签并列）为整个Web应用配置属性的话，那所有的Servlet就都能访问里面的参数了。例如：可以把数据库的配置信息放在这里。</context-param></init-param></p>
+<p>这里涉及到一些概念不要混淆：</p>
+<ul>
+<li>请求参数 <font color="red">parameter</font> — 浏览器发送过来的请求中的参数信息</li>
+<li>初始化参数 <font color="red">initparameter</font> — 在web.xml中为Servlet或ServletContext配置的初始化时带有的基本参数</li>
+<li>域属性 <font color="red">attribute</font> — 四大作用域中存取的键值对</li>
+</ul>
+<p>来串代码压压惊</p>
+<p><img src="images/2.png" alt="Alt text"><br>然后接下来我们在代码中来获取这些参数。代码如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line">public void doGet(HttpServletRequest request, HttpServletResponse response)</div><div class="line">15             throws ServletException, IOException &#123;</div><div class="line">16         ServletContext context = this.getServletContext(); // 得到上下文对象</div><div class="line">17</div><div class="line">18         // 获取单个的Context里面的初始化参数</div><div class="line">19         String value1 = context.getInitParameter(&quot;username&quot;);</div><div class="line">20         String value2 = context.getInitParameter(&quot;password&quot;);</div><div class="line">21         System.out.println(value1 + &quot;;&quot; + value2);</div><div class="line">22         System.out.println();</div><div class="line">23</div><div class="line">24         // 一次性获取Context里所有的初始化参数</div><div class="line">25         Enumeration enumeration = context.getInitParameterNames();</div><div class="line">26         while (enumeration.hasMoreElements()) &#123;</div><div class="line">27             String name = (String) enumeration.nextElement();</div><div class="line">28             String value = context.getInitParameter(name);</div><div class="line">29             System.out.println(name + &quot;;&quot; + value);</div><div class="line">30</div><div class="line">31         &#125;</div><div class="line">32</div><div class="line">33     &#125;</div></pre></td></tr></table></figure>
+<p><strong>3.加载资源文件：</strong></p>
+<p>我们先在WebRoot的根目录下新建一个资源文件config.properties：</p>
+<p>3.1 ServletContext提供了<strong>getRealPath()</strong>方法,在这个方法中传入一个路径,这个方法的底层会在传入的路径的前面拼接当前web应用的硬盘路径，从而得到当前资源的硬盘路径,这种方式即使换了发布环境,方法的底层也能得到正确的web应用的路径从而永远都是正确的资源的路径。代码如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">this.getServletContext().getRealPath(&quot;config.properties&quot;)</div></pre></td></tr></table></figure>
+<p>3.2 在很多情况下，Servlet中并不会处理大量的逻辑，而是直接调用其他的java代码，那就涉及到了下面的这个问题：<br>如果在<strong>非Servlet环境下</strong>要读取资源文件时可以采用类加载器加载文件的方式读取资源:MyService.class.getClassLoader().getResource(“../../../config.properties”).getPath()<br>那现在getResource()里面的路径该怎么写呢？</p>
+<p>我们先看一下工程发布到tomcat里面的目录：<br><img src="images/3.png" alt="Alt text"><br>进入WEB-INF目录下，是下面的样子：<br><img src="images/4.png" alt="Alt text"><br>上图中的classes目录和工程文件的src目录等价。</p>
+<ol>
+<li>如果config.properties文件放在src目录下，那路径为：getResource(“config.properties”)</li>
+<li>如果config.properties文件的位置如下(和类处于同级目录)：<br><img src="images/5.png" alt="Alt text"><br>那路径和上面的代码一样：getResource(“com/vae/servlet/config.properties”)</li>
+<li>如果config.properties文件的位置如下：</li>
+</ol>
+<p><img src="images/6.png" alt="Alt text"></p>
+<p>此时config.properties文件和classes文件并列：<br><img src="images/7.png" alt="Alt text"><br>那路径为：getResource(“../config.properties”)   注：”../“表示上一级目录。</p>
+<p>先写到这里吧!</p>
+
+      
+    </div>
+
+    <div>
+      
         
-          
-          一.ServletConfig讲解1.1. 什么是ServletConfig
-ServletConfig:代表当前Servlet在web.xml中的配置信息（用的不多）
 
-String getServletName()  – 获取当前Servlet在web.xml中配置的名字
-String getI
-          ...
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/jiangjianping/2017/05/10/servlet基础/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
+      
+    </div>
+
+    <div>
+      
         
+
       
     </div>
 
     <div>
       
-    </div>
+        
 
-    <div>
-      
-    </div>
-
-    <div>
       
     </div>
 
@@ -424,170 +467,38 @@ String getI
       
 
       
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="https://810230010.github.io/jiangjianping/jiangjianping/2017/04/27/hello-world/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Usher">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="http://www.wsfjq.com/photos/bd119778286.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="阿江的博客">
-    </span>
-
-    
-      <header class="post-header">
-
         
-        
-          <h1 class="post-title" itemprop="name headline">
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
             
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
             
-              
-                
-                <a class="post-title-link" href="/jiangjianping/2017/04/27/hello-world/" itemprop="url">
-                  Hello World
-                </a>
-              
+              <a href="/jiangjianping/2017/04/27/hello-world/" rel="prev" title="Hello World">
+                Hello World <i class="fa fa-chevron-right"></i>
+              </a>
             
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-04-27T19:17:11+08:00">
-                2017-04-27
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/jiangjianping/2017/04/27/hello-world/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="2017/04/27/hello-world/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-             <span id="/jiangjianping/2017/04/27/hello-world/" class="leancloud_visitors" data-flag-title="Hello World">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">阅读次数 </span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
-          
-
-          
-
-          
-
-          
-
+          </div>
         </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
       
 
       
-        
-          
-          Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in 
-          ...
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/jiangjianping/2017/04/27/hello-world/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </article>
 
 
-    
-  </section>
 
-  
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -595,6 +506,17 @@ String getI
 
 
           
+  <div class="comments" id="comments">
+    
+      <div id="disqus_thread">
+        <noscript>
+          Please enable JavaScript to view the
+          <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+        </noscript>
+      </div>
+    
+  </div>
+
 
         </div>
         
@@ -614,8 +536,17 @@ String getI
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="http://www.wsfjq.com/photos/bd119778286.jpg"
@@ -668,6 +599,22 @@ String getI
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#一-ServletConfig讲解"><span class="nav-number">1.</span> <span class="nav-text">一.ServletConfig讲解</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#二-ServletContext：代表当前web应用"><span class="nav-number">2.</span> <span class="nav-text">二.ServletContext：代表当前web应用</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -787,6 +734,10 @@ String getI
 
 
   
+  <script type="text/javascript" src="/jiangjianping/js/src/scrollspy.js?v=5.1.0"></script>
+<script type="text/javascript" src="/jiangjianping/js/src/post-details.js?v=5.1.0"></script>
+
+
 
   
 
@@ -804,6 +755,18 @@ String getI
       <script id="dsq-count-scr" src="https://usher-1.disqus.com/count.js" async></script>
     
 
+    
+      <script type="text/javascript">
+        var disqus_config = function () {
+          this.page.url = 'https://810230010.github.io/jiangjianping/2017/05/10/servlet基础/';
+          this.page.identifier = '2017/05/10/servlet基础/';
+          this.page.title = 'Servlet基础';
+        };
+        var d = document, s = d.createElement('script');
+        s.src = 'https://usher-1.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', '' + +new Date());
+        (d.head || d.body).appendChild(s);
+      </script>
     
 
   
