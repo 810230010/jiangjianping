@@ -87,15 +87,19 @@
 
 
 
-<meta name="description" content="Whatever is worth doing is worth doing well.----任何值得做的事就值得把它做好！">
-<meta property="og:type" content="website">
-<meta property="og:title" content="阿江的博客">
-<meta property="og:url" content="https://810230010.github.io/jiangjianping/index.html">
+<meta name="description" content="日常操作中常见的排序方法有：冒泡排序、快速排序、选择排序、插入排序、希尔排序，甚至还有基数排序、鸡尾酒排序、桶排序、鸽巢排序、归并排序等。 下面一一列举  一、冒泡排序   原理是临近的数字两两进行比较,按照从小到大或者从大到小的顺序进行交换, 12345678910111213141516171819202122232425262728  /**   * 冒泡法排序&amp;lt;br/&amp;gt;   *">
+<meta name="keywords">
+<meta property="og:type" content="article">
+<meta property="og:title" content="常用的排序算法">
+<meta property="og:url" content="https://810230010.github.io/jiangjianping/2017/05/17/常用的排序算法/index.html">
 <meta property="og:site_name" content="阿江的博客">
-<meta property="og:description" content="Whatever is worth doing is worth doing well.----任何值得做的事就值得把它做好！">
+<meta property="og:description" content="日常操作中常见的排序方法有：冒泡排序、快速排序、选择排序、插入排序、希尔排序，甚至还有基数排序、鸡尾酒排序、桶排序、鸽巢排序、归并排序等。 下面一一列举  一、冒泡排序   原理是临近的数字两两进行比较,按照从小到大或者从大到小的顺序进行交换, 12345678910111213141516171819202122232425262728  /**   * 冒泡法排序&amp;lt;br/&amp;gt;   *">
+<meta property="og:image" content="http://opqqi93kz.bkt.clouddn.com/back1.jpeg">
+<meta property="og:updated_time" content="2017-05-17T11:58:46.018Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="阿江的博客">
-<meta name="twitter:description" content="Whatever is worth doing is worth doing well.----任何值得做的事就值得把它做好！">
+<meta name="twitter:title" content="常用的排序算法">
+<meta name="twitter:description" content="日常操作中常见的排序方法有：冒泡排序、快速排序、选择排序、插入排序、希尔排序，甚至还有基数排序、鸡尾酒排序、桶排序、鸽巢排序、归并排序等。 下面一一列举  一、冒泡排序   原理是临近的数字两两进行比较,按照从小到大或者从大到小的顺序进行交换, 12345678910111213141516171819202122232425262728  /**   * 冒泡法排序&amp;lt;br/&amp;gt;   *">
+<meta name="twitter:image" content="http://opqqi93kz.bkt.clouddn.com/back1.jpeg">
 
 
 
@@ -123,13 +127,13 @@
 
 
 
-  <link rel="canonical" href="https://810230010.github.io/jiangjianping/"/>
+  <link rel="canonical" href="https://810230010.github.io/jiangjianping/2017/05/17/常用的排序算法/"/>
 
 
 
 
 
-  <title> 阿江的博客 </title>
+  <title> 常用的排序算法 | 阿江的博客 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -154,9 +158,7 @@
     
   
 
-  <div class="container sidebar-position-left 
-   page-home 
- ">
+  <div class="container sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -259,9 +261,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
 
@@ -291,10 +293,7 @@
             
             
               
-                
-                <a class="post-title-link" href="/jiangjianping/2017/05/17/常用的排序算法/" itemprop="url">
-                  常用的排序算法
-                </a>
+                常用的排序算法
               
             
           </h1>
@@ -389,35 +388,35 @@
       
 
       
+        <p><center><img src="http://opqqi93kz.bkt.clouddn.com/back1.jpeg" alt="logo"></center><br>日常操作中常见的排序方法有：冒泡排序、快速排序、选择排序、插入排序、希尔排序，甚至还有基数排序、鸡尾酒排序、桶排序、鸽巢排序、归并排序等。</p>
+<p>下面一一列举</p>
+<h3> 一、冒泡排序 </h3>
+
+<p>原理是临近的数字两两进行比较,按照从小到大或者从大到小的顺序进行交换,</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">  /**  </div><div class="line"> * 冒泡法排序&lt;br/&gt;  </div><div class="line"></div><div class="line"> * &lt;li&gt;比较相邻的元素。如果第一个比第二个大，就交换他们两个。&lt;/li&gt;  </div><div class="line"> * &lt;li&gt;对每一对相邻元素作同样的工作，从开始第一对到结尾的最后一对。在这一点，最后的元素应该会是最大的数。&lt;/li&gt;  </div><div class="line"> * &lt;li&gt;针对所有的元素重复以上的步骤，除了最后一个。&lt;/li&gt;  </div><div class="line"> * &lt;li&gt;持续每次对越来越少的元素重复上面的步骤，直到没有任何一对数字需要比较。&lt;/li&gt;  </div><div class="line"> *   </div><div class="line"> * @param arr  </div><div class="line"> * 需要排序的整型数组  </div><div class="line"> */  </div><div class="line">public static void bubbleSort(int[] arr)&#123;</div><div class="line">	for(int i=0; i&lt;arr.length-1; i++)&#123;</div><div class="line">		for(int j=i+1; j&lt;arr.length; j++)&#123;</div><div class="line">			if(arr[i] &gt; arr[j])&#123;</div><div class="line">				int temp = arr[i];</div><div class="line">				arr[i] = arr[j];</div><div class="line">				arr[j] = temp;</div><div class="line">			&#125;</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">	System.out.println(Arrays.toString(arr));</div><div class="line">&#125;</div><div class="line"> public static void main(String[] args) &#123;</div><div class="line">	int[] arr = &#123;1,3,5,2,4&#125;;</div><div class="line">    bubbleSort(arr);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>结果 [1,2,3,4,5]</p>
+
+      
+    </div>
+
+    <div>
+      
         
-          
-          日常操作中常见的排序方法有：冒泡排序、快速排序、选择排序、插入排序、希尔排序，甚至还有基数排序、鸡尾酒排序、桶排序、鸽巢排序、归并排序等。
-下面一一列举
- 一、冒泡排序 
 
-原理是临近的数字两两进行比较,按照从小到大或者从大到小的顺序进行交换,
-123456789101112131415161718
-          ...
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/jiangjianping/2017/05/17/常用的排序算法/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
+      
+    </div>
+
+    <div>
+      
         
+
       
     </div>
 
     <div>
       
-    </div>
+        
 
-    <div>
-      
-    </div>
-
-    <div>
       
     </div>
 
@@ -425,518 +424,38 @@
       
 
       
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="https://810230010.github.io/jiangjianping/jiangjianping/2017/05/11/监听器的使用/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Usher">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="http://www.wsfjq.com/photos/bd119778286.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="阿江的博客">
-    </span>
-
-    
-      <header class="post-header">
-
         
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/jiangjianping/2017/05/11/监听器的使用/" itemprop="url">
-                  监听器的使用
-                </a>
-              
-            
-          </h1>
-        
+      
 
-        <div class="post-meta">
-          <span class="post-time">
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
             
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-05-11T21:16:08+08:00">
-                2017-05-11
-              </time>
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
             
-
+              <a href="/jiangjianping/2017/05/11/监听器的使用/" rel="prev" title="监听器的使用">
+                监听器的使用 <i class="fa fa-chevron-right"></i>
+              </a>
             
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/jiangjianping/categories/JavaWeb基础/" itemprop="url" rel="index">
-                    <span itemprop="name">JavaWeb基础</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/jiangjianping/2017/05/11/监听器的使用/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="2017/05/11/监听器的使用/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-             <span id="/jiangjianping/2017/05/11/监听器的使用/" class="leancloud_visitors" data-flag-title="监听器的使用">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">阅读次数 </span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
-          
-
-          
-
-          
-
-          
-
+          </div>
         </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
       
 
       
-        
-          
-          
-(listener)监听器的使用一：Listener的定义与作用
-监听器Listener就是在application，session，request三个对象创建，销毁，或者往其中添加修改删除属性时自动执行代码的功能组件。Listener是Servlet的监听器，可以监听客户端的请求，服务端的操作等
-          ...
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/jiangjianping/2017/05/11/监听器的使用/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </article>
 
 
-    
-      
 
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="https://810230010.github.io/jiangjianping/jiangjianping/2017/05/10/servlet基础/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Usher">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="http://www.wsfjq.com/photos/bd119778286.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="阿江的博客">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/jiangjianping/2017/05/10/servlet基础/" itemprop="url">
-                  Servlet基础
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-05-10T20:34:55+08:00">
-                2017-05-10
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/jiangjianping/categories/JavaWeb基础/" itemprop="url" rel="index">
-                    <span itemprop="name">JavaWeb基础</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/jiangjianping/2017/05/10/servlet基础/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="2017/05/10/servlet基础/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-             <span id="/jiangjianping/2017/05/10/servlet基础/" class="leancloud_visitors" data-flag-title="Servlet基础">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">阅读次数 </span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-          一.ServletConfig讲解1.1. 什么是ServletConfig
-ServletConfig:代表当前Servlet在web.xml中的配置信息（用的不多）
-
-String getServletName()  – 获取当前Servlet在web.xml中配置的名字
-String getI
-          ...
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/jiangjianping/2017/05/10/servlet基础/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
+    <div class="post-spread">
       
     </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="https://810230010.github.io/jiangjianping/jiangjianping/2017/04/27/hello-world/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Usher">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="http://www.wsfjq.com/photos/bd119778286.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="阿江的博客">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/jiangjianping/2017/04/27/hello-world/" itemprop="url">
-                  Hello World
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-04-27T19:17:11+08:00">
-                2017-04-27
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/jiangjianping/2017/04/27/hello-world/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="2017/04/27/hello-world/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-             <span id="/jiangjianping/2017/04/27/hello-world/" class="leancloud_visitors" data-flag-title="Hello World">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">阅读次数 </span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-          Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in 
-          ...
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/jiangjianping/2017/04/27/hello-world/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-  </section>
-
-  
+  </div>
 
 
           </div>
@@ -944,6 +463,17 @@ String getI
 
 
           
+  <div class="comments" id="comments">
+    
+      <div id="disqus_thread">
+        <noscript>
+          Please enable JavaScript to view the
+          <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+        </noscript>
+      </div>
+    
+  </div>
+
 
         </div>
         
@@ -963,8 +493,17 @@ String getI
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="http://www.wsfjq.com/photos/bd119778286.jpg"
@@ -1017,6 +556,22 @@ String getI
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#undefined"><span class="nav-number">1.</span> <span class="nav-text"> 一、冒泡排序 </span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -1136,6 +691,10 @@ String getI
 
 
   
+  <script type="text/javascript" src="/jiangjianping/js/src/scrollspy.js?v=5.1.0"></script>
+<script type="text/javascript" src="/jiangjianping/js/src/post-details.js?v=5.1.0"></script>
+
+
 
   
 
@@ -1153,6 +712,18 @@ String getI
       <script id="dsq-count-scr" src="https://usher-1.disqus.com/count.js" async></script>
     
 
+    
+      <script type="text/javascript">
+        var disqus_config = function () {
+          this.page.url = 'https://810230010.github.io/jiangjianping/2017/05/17/常用的排序算法/';
+          this.page.identifier = '2017/05/17/常用的排序算法/';
+          this.page.title = '常用的排序算法';
+        };
+        var d = document, s = d.createElement('script');
+        s.src = 'https://usher-1.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', '' + +new Date());
+        (d.head || d.body).appendChild(s);
+      </script>
     
 
   
