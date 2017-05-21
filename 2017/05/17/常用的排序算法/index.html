@@ -95,7 +95,7 @@
 <meta property="og:site_name" content="阿江">
 <meta property="og:description" content="日常操作中常见的排序方法有：冒泡排序、快速排序、选择排序、插入排序、希尔排序，甚至还有基数排序、鸡尾酒排序、桶排序、鸽巢排序、归并排序等。 下面一一列举  一、冒泡排序   原理是临近的数字两两进行比较,按照从小到大或者从大到小的顺序进行交换, 12345678910111213141516171819202122232425262728  /**   * 冒泡法排序&amp;lt;br/&amp;gt;   *">
 <meta property="og:image" content="http://opqqi93kz.bkt.clouddn.com/back1.jpeg">
-<meta property="og:updated_time" content="2017-05-19T10:44:26.898Z">
+<meta property="og:updated_time" content="2017-05-21T11:28:29.321Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="常用的排序算法">
 <meta name="twitter:description" content="日常操作中常见的排序方法有：冒泡排序、快速排序、选择排序、插入排序、希尔排序，甚至还有基数排序、鸡尾酒排序、桶排序、鸽巢排序、归并排序等。 下面一一列举  一、冒泡排序   原理是临近的数字两两进行比较,按照从小到大或者从大到小的顺序进行交换, 12345678910111213141516171819202122232425262728  /**   * 冒泡法排序&amp;lt;br/&amp;gt;   *">
@@ -402,6 +402,14 @@
 <p>代码如下</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line">public static void selectSort(int[] arr)&#123;</div><div class="line">    	for(int i=0; i&lt;arr.length; i++)&#123;</div><div class="line">    		int min = arr[i];</div><div class="line">    		int index = 0;</div><div class="line">    		for(int j=i; j&lt;arr.length; j++)&#123;</div><div class="line">    			if(arr[j] &lt;= min)&#123;</div><div class="line">    			    min = arr[j];</div><div class="line">    				index = j;</div><div class="line">    			&#125;</div><div class="line">    		&#125;</div><div class="line"></div><div class="line">    		int temp = arr[index];</div><div class="line">    		arr[index] = arr[i];</div><div class="line">    		arr[i] = temp;</div><div class="line">    	&#125;</div><div class="line">    	System.out.println(Arrays.toString(arr));</div><div class="line">    &#125;</div><div class="line">	public static void main(String[] args) &#123;</div><div class="line">		int[] arr = &#123;1,1,3,5,2&#125;;</div><div class="line">	    selectSort(arr);</div><div class="line">	&#125;</div></pre></td></tr></table></figure>
 <p>  结果:[1, 1, 2, 3, 5]</p>
+<p>=======================================================</p>
+<h3>插入排序</h3>
+
+<font color="red">通过构建有序序列，对于未排序数据，在已排序序列中从后向前扫描，找到相应的位置并插入。</font>
+
+<p>代码如下:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">// 插入排序</div><div class="line">  public static void insertSort(int[] arr)&#123;</div><div class="line">     for(int i=1; i&lt;arr.length; i++)&#123;</div><div class="line">       int temp = arr[i];       </div><div class="line">         while(i&gt;0 &amp;&amp; temp&lt;arr[i-1])&#123;</div><div class="line">          arr[i] = arr[i-1];</div><div class="line">          i--;</div><div class="line">         &#125;</div><div class="line">         arr[i] = temp;</div><div class="line"></div><div class="line">     &#125;</div><div class="line">     System.out.println(Arrays.toString(arr));</div><div class="line">  &#125;</div><div class="line">public static void main(String[] args) &#123;</div><div class="line">  int[] arr = &#123;2,1,4,7,0,2,343,123,12,11,1&#125;;</div><div class="line">    insertSort(arr);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>结果:[0, 1, 1, 2, 2, 4, 7, 11, 12, 123, 343]</p>
 
       
     </div>
@@ -573,7 +581,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#undefined"><span class="nav-number">1.</span> <span class="nav-text"> 一、冒泡排序 </span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#undefined"><span class="nav-number">2.</span> <span class="nav-text">选择排序</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#undefined"><span class="nav-number">1.</span> <span class="nav-text"> 一、冒泡排序 </span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#undefined"><span class="nav-number">2.</span> <span class="nav-text">选择排序</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#undefined"><span class="nav-number">3.</span> <span class="nav-text">插入排序</span></a></li></ol></div>
             
 
           </div>
