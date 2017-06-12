@@ -87,19 +87,20 @@
 
 
 
-<meta name="description" content="二分查找算法(Java)   1.二分查找又称折半查找，它是一种效率较高的查找方法。 2.二分查找要求：（1）必须采用顺序存储结构 （2）.必须按关键字大小有序排列 3.原理：将数组分为三部分，依次是中值（所谓的中值就是数组中间位置的那个值）前，中值，中值后；将要查找的值和数组的中值进行比较，若小于中值则在中值前 面找，若大于中值则在中值后面找，等于中值时直接返回。然后依次是一个递归过程，将前半部">
+<meta name="description" content="前言  一、设计模式的分类 总体来说设计模式分为三大类： 创建型模式，共五种：工厂方法模式、抽象工厂模式、单例模式、建造者模式、原型模式。 结构型模式，共七种：适配器模式、装饰器模式、代理模式、外观模式、桥接模式、组合模式、享元模式。 行为型模式，共十一种：策略模式、模板方法模式、观察者模式、迭代子模式、责任链模式、命令模式、备忘录模式、状态模式、访问者模式、中介者模式、解释器模式。 其实还有两类">
 <meta name="keywords">
 <meta property="og:type" content="article">
-<meta property="og:title" content="二分查找算法">
-<meta property="og:url" content="https://810230010.github.io/jiangjianping/2017/05/23/二分查找算法/index.html">
+<meta property="og:title" content="Java设计模式之工厂模式">
+<meta property="og:url" content="https://810230010.github.io/jiangjianping/2017/06/12/Java设计模式之简单工厂模式/index.html">
 <meta property="og:site_name" content="阿江">
-<meta property="og:description" content="二分查找算法(Java)   1.二分查找又称折半查找，它是一种效率较高的查找方法。 2.二分查找要求：（1）必须采用顺序存储结构 （2）.必须按关键字大小有序排列 3.原理：将数组分为三部分，依次是中值（所谓的中值就是数组中间位置的那个值）前，中值，中值后；将要查找的值和数组的中值进行比较，若小于中值则在中值前 面找，若大于中值则在中值后面找，等于中值时直接返回。然后依次是一个递归过程，将前半部">
-<meta property="og:image" content="http://opqqi93kz.bkt.clouddn.com/pexels-photo-398532.jpeg">
-<meta property="og:updated_time" content="2017-05-23T14:52:06.164Z">
+<meta property="og:description" content="前言  一、设计模式的分类 总体来说设计模式分为三大类： 创建型模式，共五种：工厂方法模式、抽象工厂模式、单例模式、建造者模式、原型模式。 结构型模式，共七种：适配器模式、装饰器模式、代理模式、外观模式、桥接模式、组合模式、享元模式。 行为型模式，共十一种：策略模式、模板方法模式、观察者模式、迭代子模式、责任链模式、命令模式、备忘录模式、状态模式、访问者模式、中介者模式、解释器模式。 其实还有两类">
+<meta property="og:image" content="http://opqqi93kz.bkt.clouddn.com/uml1.png">
+<meta property="og:image" content="http://opqqi93kz.bkt.clouddn.com/UML2.png">
+<meta property="og:updated_time" content="2017-06-12T12:18:42.295Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="二分查找算法">
-<meta name="twitter:description" content="二分查找算法(Java)   1.二分查找又称折半查找，它是一种效率较高的查找方法。 2.二分查找要求：（1）必须采用顺序存储结构 （2）.必须按关键字大小有序排列 3.原理：将数组分为三部分，依次是中值（所谓的中值就是数组中间位置的那个值）前，中值，中值后；将要查找的值和数组的中值进行比较，若小于中值则在中值前 面找，若大于中值则在中值后面找，等于中值时直接返回。然后依次是一个递归过程，将前半部">
-<meta name="twitter:image" content="http://opqqi93kz.bkt.clouddn.com/pexels-photo-398532.jpeg">
+<meta name="twitter:title" content="Java设计模式之工厂模式">
+<meta name="twitter:description" content="前言  一、设计模式的分类 总体来说设计模式分为三大类： 创建型模式，共五种：工厂方法模式、抽象工厂模式、单例模式、建造者模式、原型模式。 结构型模式，共七种：适配器模式、装饰器模式、代理模式、外观模式、桥接模式、组合模式、享元模式。 行为型模式，共十一种：策略模式、模板方法模式、观察者模式、迭代子模式、责任链模式、命令模式、备忘录模式、状态模式、访问者模式、中介者模式、解释器模式。 其实还有两类">
+<meta name="twitter:image" content="http://opqqi93kz.bkt.clouddn.com/uml1.png">
 
 
 
@@ -127,13 +128,13 @@
 
 
 
-  <link rel="canonical" href="https://810230010.github.io/jiangjianping/2017/05/23/二分查找算法/"/>
+  <link rel="canonical" href="https://810230010.github.io/jiangjianping/2017/06/12/Java设计模式之简单工厂模式/"/>
 
 
 
 
 
-  <title> 二分查找算法 | 阿江 </title>
+  <title> Java设计模式之工厂模式 | 阿江 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -272,7 +273,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="https://810230010.github.io/jiangjianping/jiangjianping/2017/05/23/二分查找算法/">
+    <link itemprop="mainEntityOfPage" href="https://810230010.github.io/jiangjianping/jiangjianping/2017/06/12/Java设计模式之简单工厂模式/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Usher">
@@ -293,7 +294,7 @@
             
             
               
-                二分查找算法
+                Java设计模式之工厂模式
               
             
           </h1>
@@ -308,8 +309,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-05-23T22:18:11+08:00">
-                2017-05-23
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-06-12T18:34:52+08:00">
+                2017-06-12
               </time>
             
 
@@ -331,8 +332,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/jiangjianping/categories/算法/" itemprop="url" rel="index">
-                    <span itemprop="name">算法</span>
+                  <a href="/jiangjianping/categories/设计模式/" itemprop="url" rel="index">
+                    <span itemprop="name">设计模式</span>
                   </a>
                 </span>
 
@@ -349,9 +350,9 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/jiangjianping/2017/05/23/二分查找算法/#comments" itemprop="discussionUrl">
+                <a href="/jiangjianping/2017/06/12/Java设计模式之简单工厂模式/#comments" itemprop="discussionUrl">
                   <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="2017/05/23/二分查找算法/" itemprop="commentCount"></span>
+                        data-disqus-identifier="2017/06/12/Java设计模式之简单工厂模式/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -359,7 +360,7 @@
 
           
           
-             <span id="/jiangjianping/2017/05/23/二分查找算法/" class="leancloud_visitors" data-flag-title="二分查找算法">
+             <span id="/jiangjianping/2017/06/12/Java设计模式之简单工厂模式/" class="leancloud_visitors" data-flag-title="Java设计模式之工厂模式">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -388,20 +389,32 @@
       
 
       
-        <h3>二分查找算法(Java)</h3>
+        <h2>前言</h2>
 
-<p><img src="http://opqqi93kz.bkt.clouddn.com/pexels-photo-398532.jpeg" alt="logo"></p>
-<p>1.二分查找又称折半查找，它是一种效率较高的查找方法。</p>
-<p>2.二分查找要求：（1）必须采用顺序存储结构 （2）.必须按关键字大小有序排列</p>
-<p>3.原理：将数组分为三部分，依次是中值（所谓的中值就是数组中间位置的那个值）前，中值，中值后；将要查找的值和数组的中值进行比较，若小于中值则在中值前 面找，若大于中值则在中值后面找，等于中值时直接返回。然后依次是一个递归过程，将前半部分或者后半部分继续分解为三部分。</p>
-<p>4.实现：二分查找的实现用递归和循环两种方式</p>
-<p>代码如下:</p>
-<p><strong> 1.非递归 </strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div></pre></td><td class="code"><pre><div class="line">/**</div><div class="line"> *@description 二分查找非递归</div><div class="line"> *@return 所查询的数字索引 查询不到返回-1</div><div class="line"> /</div><div class="line">public static int binarySearch(int[] arr, int target)&#123;</div><div class="line">   int left = 0;</div><div class="line">   int right = arr.length - 1;</div><div class="line">   while(left &lt;= right)&#123;</div><div class="line">     int middle = (left + right) / 2;</div><div class="line">     if(target = arr[middle])&#123;</div><div class="line">       return middle;</div><div class="line">     &#125;</div><div class="line">     if(target &gt; array[middle])&#123;</div><div class="line">       left = middle + 1;</div><div class="line">     &#125;else&#123;</div><div class="line">       right = middle - 1;</div><div class="line">     &#125;</div><div class="line">   &#125;</div><div class="line">   return -1;</div><div class="line">&#125;</div><div class="line">//程序入口</div><div class="line">public static void main(String[] args)&#123;</div><div class="line">  int[] arr = &#123;1,5,5,7,9,10,34&#125;;  //必须为已排好序的数组</div><div class="line">  System.out.println(binarySearch(arr, 9));</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<p>结果: 4</p>
-<p><strong>2.递归实现二分查找</strong></p>
-<p>代码如下:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line">public int binarySearchByRecursive(int[] arr, int left, int right, int target)&#123;</div><div class="line">  int middleIndex = (right + left) / 2;</div><div class="line">  if(left &gt; right || target &lt; arr[left] || target &gt; arr[right])&#123;</div><div class="line">    return -1;</div><div class="line">  &#125;</div><div class="line">  if(target &gt; arr[middleIndex])&#123;</div><div class="line">    return binarySearchByRecursive(arr, middleIndex+1, right, target)</div><div class="line">  &#125;else if(target &lt; arr[middleIndex])&#123;</div><div class="line">    return binarySearchByRecursive(arr, left, middleIndex - 1);</div><div class="line">  &#125;else&#123;</div><div class="line">    return middleIndex;</div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line">//程序入口</div><div class="line">public static void main(String[] args)&#123;</div><div class="line">  int[] arr = &#123;1,5,5,7,9,10,34&#125;;  //必须为已排好序的数组</div><div class="line">  System.out.println(binarySearch(arr, 9));</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>结果如非递归二分查找。</p>
+<p><strong>一、设计模式的分类</strong></p>
+<p>总体来说设计模式分为三大类：</p>
+<p>创建型模式，共五种：工厂方法模式、抽象工厂模式、单例模式、建造者模式、原型模式。</p>
+<p>结构型模式，共七种：适配器模式、装饰器模式、代理模式、外观模式、桥接模式、组合模式、享元模式。</p>
+<p>行为型模式，共十一种：策略模式、模板方法模式、观察者模式、迭代子模式、责任链模式、命令模式、备忘录模式、状态模式、访问者模式、中介者模式、解释器模式。</p>
+<p>其实还有两类：并发型模式和线程池模式。  </p>
+<p><strong>二、设计模式的六大原则</strong></p>
+<p>1.<font color="red">开闭原则:</font>对扩展开放，对修改关闭。所以我们要尽可能面向接口编程，而不是面向实现编程。</p>
+<p>2.<font color="red">里氏代换原则:</font>里氏代换是对开闭原则的补充,实现开闭原则的关键是抽象编程，而子类和基类是实现具体化的步骤。所以里氏代换是对具体化的规范。</p>
+<p>3.<font color="red">依赖倒转:</font>针对接口编程，依赖于抽象而不依赖于具体。</p>
+<p>4.<font color="red">迪米特法则(最少知道):</font>每个类应该尽可能少的和其他类有联系，就是平时所说的低耦合，使得系统功能模块相对独立。</p>
+<p>5.<font color="red">合成复用模式:</font>尽可能使用组合模式，而不是使用集成。</p>
+<p>接下来将学习大部分的设计模式!</p>
+<p></p><h2>正文</h2><br>这次要学习的是工厂模式<p></p>
+<p>工厂模式总共有三种: 简单工厂模式、抽象工厂方法模式、抽象工厂模式。</p>
+<p>1.首先来说说<strong>简单工厂模式</strong>，先看UML图</p>
+<p><img src="http://opqqi93kz.bkt.clouddn.com/uml1.png" alt="logo"></p>
+<p>工厂根据produce方法传进的type来确定生产的是什么车，但是返回的类型并不是具体的车，而是那些具体类的接口。</p>
+<p>具体代码<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div></pre></td><td class="code"><pre><div class="line">public interface Car&#123;</div><div class="line">  void describe();</div><div class="line">&#125;</div><div class="line">//宝马</div><div class="line">public Class BMW implements Car&#123;</div><div class="line">  public void describe()&#123;</div><div class="line">    System.out.println(&quot;Yep,this is BMW&quot;);</div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line">//奔驰</div><div class="line">public Class Benz implements Car&#123;</div><div class="line">  public void describe()&#123;</div><div class="line">    System.out.println(&quot;Wow, this is Benz&quot;);</div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line">//工厂</div><div class="line">public Class CarFactory&#123;</div><div class="line">  public Car produceCar(String carType)&#123;</div><div class="line">     Car car = null;</div><div class="line">     switch(carType)&#123;</div><div class="line">       case &quot;BMW&quot;:</div><div class="line">          car = new BMW();</div><div class="line">          break;</div><div class="line">       case &quot;Benz&quot;:</div><div class="line">          car = new Benz();</div><div class="line">          break;</div><div class="line">     &#125;</div><div class="line">     return Car;</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>2.<strong>工厂方法模式</strong></p>
+<p>一个抽象产品类，可以派生出多个具体产品类。<br>一个抽象工厂类，可以派生出多个具体工厂类。<br>每个具体工厂类只能创建一个具体产品类的实例。</p>
+<p>UML图<br><img src="http://opqqi93kz.bkt.clouddn.com/UML2.png" alt="logo"></p>
+<p>具体代码</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div></pre></td><td class="code"><pre><div class="line">//抽象工厂</div><div class="line">public interface Factory&#123;</div><div class="line">  Car produce();</div><div class="line">&#125;</div><div class="line">//宝马生产工厂</div><div class="line">public Class BMWFactory implements Factory&#123;</div><div class="line">  public Car produce()&#123;</div><div class="line">    return new BMW();</div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line">//奔驰生产工厂</div><div class="line">public Class BenzFactory implements Factory&#123;</div><div class="line">  public Car produce()&#123;</div><div class="line">    return new BenzFactory();</div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">//抽象类汽车</div><div class="line">public interface Car&#123;</div><div class="line">   void describe();</div><div class="line">&#125;</div><div class="line">//宝马</div><div class="line">public Class Car implements Car&#123;</div><div class="line">  void describe()&#123;</div><div class="line">    System.out.println(&quot;BWM!!!&quot;);</div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line">//奔驰</div><div class="line">public Class Benz implements Car&#123;</div><div class="line">  void describe()&#123;</div><div class="line">    System.out.println(&quot;Benz!!!!&quot;);</div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line">//程序入口</div><div class="line">public static void main(String[] args)&#123;</div><div class="line">  //生产宝马</div><div class="line">  Factory bmwFactory = new BMWFactory();</div><div class="line">  Car bmwCar = bmwFactory.produce();</div><div class="line"></div><div class="line">  //生产奔驰</div><div class="line">  Factory benzFactory = new BenzFactory();</div><div class="line">  Car benzCar = benzFactory.produce();</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 
       
     </div>
@@ -438,18 +451,14 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/jiangjianping/2017/06/12/Java设计模式之简单工厂模式/" rel="next" title="Java设计模式之工厂模式">
-                <i class="fa fa-chevron-left"></i> Java设计模式之工厂模式
-              </a>
-            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/jiangjianping/2017/05/17/常用的排序算法/" rel="prev" title="常用的排序算法">
-                常用的排序算法 <i class="fa fa-chevron-right"></i>
+              <a href="/jiangjianping/2017/05/23/二分查找算法/" rel="prev" title="二分查找算法">
+                二分查找算法 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -577,7 +586,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#undefined"><span class="nav-number">1.</span> <span class="nav-text">二分查找算法(Java)</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#undefined"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#undefined"><span class="nav-number">2.</span> <span class="nav-text">正文</span></a></li></ol></div>
             
 
           </div>
@@ -726,9 +735,9 @@
     
       <script type="text/javascript">
         var disqus_config = function () {
-          this.page.url = 'https://810230010.github.io/jiangjianping/2017/05/23/二分查找算法/';
-          this.page.identifier = '2017/05/23/二分查找算法/';
-          this.page.title = '二分查找算法';
+          this.page.url = 'https://810230010.github.io/jiangjianping/2017/06/12/Java设计模式之简单工厂模式/';
+          this.page.identifier = '2017/06/12/Java设计模式之简单工厂模式/';
+          this.page.title = 'Java设计模式之工厂模式';
         };
         var d = document, s = d.createElement('script');
         s.src = 'https://usher-1.disqus.com/embed.js';
